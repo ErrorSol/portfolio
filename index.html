@@ -4,104 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivam Chaudhary - Professional Video Creator & Editor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Neon Purple Theme: Dark base with glowing purples */
+        /* Professional Cinematic Theme: Dark, elegant with subtle gold accents */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            line-height: 1.7;
             overflow-x: hidden;
         }
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            background: rgba(0, 0, 0, 0.8);
-            border-bottom: 2px solid #8A2BE2;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+            padding: 1.5rem 2rem;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(191, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: #8A2BE2;
-            text-shadow: 0 0 10px #8A2BE2;
+            font-size: 1.8rem;
+            color: #BFAF37;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
         nav ul {
             display: flex;
             list-style: none;
+            align-items: center;
         }
         nav li {
-            margin: 0 1rem;
+            margin: 0 1.5rem;
         }
         nav a {
-            color: #fff;
+            color: #d1d5db;
             text-decoration: none;
             font-weight: 400;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #BFAF37;
+            transition: width 0.3s ease;
         }
         nav a:hover {
-            color: #8A2BE2;
-            text-shadow: 0 0 5px #8A2BE2;
+            color: #BFAF37;
+        }
+        nav a:hover::after {
+            width: 100%;
         }
         .contact-btn {
-            background: #8A2BE2;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            background: rgba(191, 175, 55, 0.1);
+            color: #BFAF37;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 0 10px #8A2BE2;
-            transition: all 0.3s;
+            font-weight: 500;
+            border: 1px solid rgba(191, 175, 55, 0.2);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
         .contact-btn:hover {
-            box-shadow: 0 0 20px #8A2BE2;
-            transform: scale(1.05);
+            background: #BFAF37;
+            color: #000;
+            box-shadow: 0 0 15px rgba(191, 175, 55, 0.3);
         }
         .hero {
-            padding: 4rem 2rem;
+            padding: 8rem 0 6rem;
             text-align: center;
             position: relative;
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 0, 0, 0.8));
+            background: radial-gradient(circle at center, rgba(191, 175, 55, 0.05) 0%, rgba(10, 10, 10, 1) 70%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .hello-box {
             display: inline-block;
-            border: 2px solid #8A2BE2;
-            padding: 1rem 2rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(191, 175, 55, 0.3);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            background: rgba(191, 175, 55, 0.05);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: #BFAF37;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .hero-content {
+            max-width: 800px;
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
             color: #fff;
-            text-shadow: 0 0 10px #8A2BE2;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            font-weight: 700;
         }
         .hero .subtitle {
-            font-size: 2rem;
-            color: #8A2BE2;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 5px #8A2BE2;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #BFAF37;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #ccc;
+            margin: 0 auto 3rem;
+            color: #a0a0a0;
+            font-weight: 300;
         }
         .profile-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             margin-top: 2rem;
             flex-wrap: wrap;
         }
@@ -110,228 +149,281 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+            box-shadow: 0 0 30px rgba(191, 175, 55, 0.2);
+            border: 2px solid rgba(191, 175, 55, 0.1);
         }
         .profile-overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(138, 43, 226, 0.2);
+            background: rgba(191, 175, 55, 0.05);
             border-radius: 50%;
-            width: 300px;
-            height: 300px;
+            width: 280px;
+            height: 280px;
             z-index: -1;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            background: rgba(191, 175, 55, 0.1);
+            color: #BFAF37;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(191, 175, 55, 0.2);
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .btn:hover {
+            background: #BFAF37;
+            color: #000;
+            box-shadow: 0 5px 20px rgba(191, 175, 55, 0.2);
+            transform: translateY(-2px);
         }
         .role-badges {
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
-            margin-left: 17rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
         .badge {
-            background: rgba(138, 43, 226, 0.2);
-            padding: 0.5rem 1rem;
+            background: rgba(191, 175, 55, 0.1);
+            padding: 0.5rem 1.5rem;
             border-radius: 20px;
-            border: 1px solid #8A2BE2;
-            box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(191, 175, 55, 0.2);
+            color: #BFAF37;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
         }
-        .btn {
-            background: #8A2BE2;
-            color: #fff;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            margin: 0.5rem;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn:hover {
-            box-shadow: 0 0 25px #8A2BE2;
-            transform: translateY(-2px);
+        .badge:hover {
+            background: rgba(191, 175, 55, 0.2);
+            box-shadow: 0 0 10px rgba(191, 175, 55, 0.2);
         }
         .sub-nav {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.5);
-            margin: 2rem 0;
+            gap: 3rem;
+            padding: 2rem 0;
+            background: rgba(10, 10, 10, 0.8);
+            margin: 0;
+            flex-wrap: wrap;
         }
         .sub-nav a {
-            color: #8A2BE2;
+            color: #BFAF37;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
             position: relative;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
         }
         .sub-nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 0;
             height: 2px;
-            background: #8A2BE2;
-            transition: width 0.3s;
+            background: #BFAF37;
+            transition: width 0.3s ease;
         }
         .sub-nav a:hover::after {
             width: 100%;
         }
-        .services {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        .sub-nav a:hover {
+            text-shadow: 0 0 5px rgba(191, 175, 55, 0.3);
+        }
+        .section {
+            padding: 6rem 0;
         }
         .services h2 {
             text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #8A2BE2;
-            text-shadow: 0 0 10px #8A2BE2;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
         .service-card {
-            background: rgba(138, 43, 226, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid #8A2BE2;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
-            transition: all 0.3s;
+            border: 1px solid rgba(191, 175, 55, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
         }
         .service-card:hover {
-            box-shadow: 0 0 30px #8A2BE2;
+            border-color: #BFAF37;
+            box-shadow: 0 10px 40px rgba(191, 175, 55, 0.1);
             transform: translateY(-5px);
         }
         .service-icon {
-            font-size: 3rem;
-            color: #8A2BE2;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            color: #BFAF37;
+            margin-bottom: 1.5rem;
+            display: block;
         }
         .service-card h3 {
             font-family: 'Playfair Display', serif;
             margin-bottom: 1rem;
             color: #fff;
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+            font-weight: 700;
         }
         .service-card p {
-            color: #ccc;
-            margin-bottom: 1rem;
+            color: #a0a0a0;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        .btn.small {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
         }
         .view-all {
             display: block;
-            margin: 2rem auto;
-            background: #8A2BE2;
-            color: #fff;
-            padding: 1rem 2rem;
+            margin: 3rem auto 0;
+            background: rgba(191, 175, 55, 0.1);
+            color: #BFAF37;
+            padding: 1rem 2.5rem;
             border-radius: 30px;
             text-decoration: none;
             width: fit-content;
-            box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+            border: 1px solid rgba(191, 175, 55, 0.2);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .view-all:hover {
+            background: #BFAF37;
+            color: #000;
+            box-shadow: 0 5px 20px rgba(191, 175, 55, 0.2);
         }
         .about {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 0, 0, 0.8));
-            text-align: center;
+            background: rgba(10, 10, 10, 0.9);
+            border-top: 1px solid rgba(191, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(191, 175, 55, 0.1);
         }
         .about-header {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
         .about-photo {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            box-shadow: 0 0 25px rgba(191, 175, 55, 0.1);
+            border: 2px solid rgba(191, 175, 55, 0.05);
             flex-shrink: 0;
         }
         .about h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: #8A2BE2;
-            text-shadow: 0 0 10px #8A2BE2;
+            color: #BFAF37;
+            letter-spacing: 1px;
+            font-weight: 700;
             margin: 0;
             text-align: center;
+            flex: 1;
         }
         .about p {
             max-width: 800px;
             margin: 0 auto;
-            color: #ccc;
+            color: #a0a0a0;
             font-size: 1.1rem;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.8;
         }
         .portfolio {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 6rem 0;
         }
         .portfolio h2 {
             text-align: center;
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #8A2BE2;
-            text-shadow: 0 0 10px #8A2BE2;
+            margin-bottom: 3rem;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .portfolio-card {
-            background: rgba(138, 43, 226, 0.1);
-            border-radius: 10px;
-            border: 1px solid #8A2BE2;
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 15px;
             overflow: hidden;
-            transition: all 0.3s;
+            border: 1px solid rgba(191, 175, 55, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
         }
         .portfolio-card:hover {
-            box-shadow: 0 0 30px #8A2BE2;
+            border-color: #BFAF37;
+            box-shadow: 0 10px 40px rgba(191, 175, 55, 0.1);
             transform: translateY(-5px);
         }
-        .video-placeholder {
-            width: 100%;
-            height: 200px;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            font-size: 1rem;
-            border-bottom: 1px solid rgba(138, 43, 226, 0.1);
-        }
         .portfolio-title {
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
             font-family: 'Playfair Display', serif;
             color: #fff;
             font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            background: #000;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(191, 175, 55, 0.1);
         }
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .profile-section { flex-direction: column; }
-            .sub-nav { flex-wrap: wrap; }
+            .profile-section { flex-direction: column; text-align: center; }
+            .sub-nav { gap: 1.5rem; padding: 1.5rem 0; }
             .about-header { flex-direction: column; text-align: center; }
+            .about h2 { text-align: center; margin-top: 1rem; }
+            nav { padding: 1rem; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">S</div>
+        <div class="logo">Shivam Chaudhary</div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -344,124 +436,138 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="profile-overlay"></div>
-        <div class="hello-box">Hello There!</div>
-        <h1>I'm Shivam Chaudhary,</h1>
-        <p class="subtitle">Professional Video Creator & Editor</p>
-        <p>Based in India. With expertise in iPhone videography, editing, and a deep understanding of angles, lighting, and storytelling.</p>
-        <div class="profile-section">
-            <img src="profile.jpg" alt="Shivam Chaudhary" class="profile-img">
-            <div>
-                <a href="#portfolio" class="btn">View My Portfolio</a>
-                <a href="#contact" class="btn">Hire Me</a>
+        <div class="container">
+            <div class="profile-overlay"></div>
+            <div class="hello-box">[ Hello There! ]</div>
+            <div class="hero-content">
+                <h1>I'm Shivam Chaudhary,</h1>
+                <p class="subtitle">Professional Video Creator & Editor</p>
+                <p>Based in India. With expertise in iPhone videography, editing, and a deep understanding of angles, lighting, and storytelling.</p>
+                <div class="profile-section">
+                    <img src="profile.jpg" alt="Shivam Chaudhary" class="profile-img">
+                    <div class="btn-group">
+                        <a href="#portfolio" class="btn">View My Portfolio</a>
+                        <a href="#contact" class="btn">Hire Me</a>
+                    </div>
+                </div>
+                <div class="role-badges">
+                    <div class="badge">Video Creator</div>
+                    <div class="badge">Cinematic Editor</div>
+                </div>
             </div>
-        </div>
-        <div class="role-badges">
-            <div class="badge">Video Creator</div>
-            <div class="badge">Cinematic Editor</div>
         </div>
     </section>
 
     <div class="sub-nav">
-        <a href="#real-estate">Real Estate</a>
-        <a href="#brand-cars">Brand Shoot (Cars)</a>
-        <a href="#brand-sweets">Brand Shoot (Sweets & Fashion)</a>
-        <a href="#live-events">Live Events</a>
-        <a href="#studio-bir">Studio Bar</a>
+        <div class="container">
+            <a href="#real-estate">Real Estate</a>
+            <a href="#brand-cars">Brand Shoot (Cars)</a>
+            <a href="#brand-sweets">Brand Shoot (Sweets & Fashion)</a>
+            <a href="#live-events">Live Events</a>
+            <a href="#studio-bir">Studio Bir</a>
+        </div>
     </div>
 
-    <section id="services" class="services">
-        <h2>Services I Provide</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>iPhone Videography</h3>
-                <p>Transform ordinary moments into cinematic stories with mobile precision.</p>
-                <a href="#" class="btn small">Learn more →</a>
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Services I Provide</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>iPhone Videography</h3>
+                    <p>Transform ordinary moments into cinematic stories with mobile precision.</p>
+                    <a href="#" class="btn small">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Cinematic Editing</h3>
+                    <p>Craft visuals that engage, inspire, and leave an impact with expert cuts.</p>
+                    <a href="#" class="btn small">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3>Brand Content</h3>
+                    <p>From luxury cars to fashion, bring creativity to every brand frame.</p>
+                    <a href="#" class="btn small">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Event Shoots</h3>
+                    <p>Capture live moments with precision and storytelling flair.</p>
+                    <a href="#" class="btn small">Learn more →</a>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">✂️</div>
-                <h3>Cinematic Editing</h3>
-                <p>Craft visuals that engage, inspire, and leave an impact with expert cuts.</p>
-                <a href="#" class="btn small">Learn more →</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎥</div>
-                <h3>Brand Content</h3>
-                <p>From luxury cars to fashion, bring creativity to every brand frame.</p>
-                <a href="#" class="btn small">Learn more →</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎉</div>
-                <h3>Event Shoots</h3>
-                <p>Capture live moments with precision and storytelling flair.</p>
-                <a href="#" class="btn small">Learn more →</a>
-            </div>
-        </div>
-        <a href="#services" class="view-all">View All Services →</a>
-    </section>
-
-    <section id="about" class="about">
-        <div class="about-header">
-            <img src="profile.jpg" alt="Shivam Chaudhary" class="about-photo">
-            <h2>Who is Shivam Chaudhary?</h2>
-        </div>
-        <p>I’m a passionate video creator and editor who transforms ordinary moments into cinematic stories. With expertise in iPhone videography, editing, and a deep understanding of angles, lighting, and storytelling, I craft visuals that engage, inspire, and leave an impact. From event shoots to brand content and social media visuals, I bring creativity and precision to every frame. If you’re looking for professional-quality videos, shot and edited with a cinematic touch — you’re in the right place.</p>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>These Is All My Work</h2>
-        <div class="portfolio-grid">
-            <!-- Real Estate (2 videos) -->
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1fMCv9lZnT3GCKG9pPwsVC2VwsF011icv/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Events Live Coverage</div>
-            </div>
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1tSSujF3WNdDneIL_P90jduOIvuHXQVnt/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Rasme Sweets Brand Story</div>
-            </div>
-            <!-- Brand Shoot (Cars) (2 videos) -->
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1Au_wcb5KBpy4o58x3bpV_ftFsE0yYb9m/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Wedding Event Shoot</div>
-            </div>
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/14j3m4DeEANom9akL66iHb1_5JEibXfmq/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Cars Highlight</div>
-            </div>
-            <!-- Brand Shoot (Sweets & Fashion) (2 videos) -->
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1QedOgIHtWEd84zig-mo2yy8P82ryXYoc/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Mela Exploration</div>
-            </div>
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1UwUbHfhCX-9foF-LcTo1iXkWa8uxzIF4/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Shubham Fashion Wholesale</div>
-            </div>
-            <!-- Live Events (2 videos) -->
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1VQ-tqTQmPXfdrIZ4CoI7uUjNivs_VQm1/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">The House Of Sets 1</div>
-            </div>
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1MeG7CIAGCEHLF3UJNL_-yltpdDdtmjbq/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">The house Of Sets 2</div>
-            </div>
-            <!-- Studio Bir (2 videos) -->
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1LCg1FaCzLW_gUsB7o_zuxeTCmdLt8Ikg/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">Haldi Ceremony Edit</div>
-            </div>
-            <div class="portfolio-card">
-                <iframe src="https://drive.google.com/file/d/1GZahByBlj6OD2Qb7AtlJKX36r7nDkwQa/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-                <div class="portfolio-title">The Grand Nirvana</div>
-            </div>
+            <a href="#services" class="view-all">View All Services →</a>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 2rem; background: #000; color: #ccc;">
-        <p>&copy; 2025 Shivam Chaudhary. All rights reserved.</p>
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-header">
+                <img src="profile.jpg" alt="Shivam Chaudhary" class="about-photo">
+                <h2>Who is Shivam Chaudhary?</h2>
+            </div>
+            <p>I’m a passionate video creator and editor who transforms ordinary moments into cinematic stories. With expertise in iPhone videography, editing, and a deep understanding of angles, lighting, and storytelling, I craft visuals that engage, inspire, and leave an impact. From event shoots to brand content and social media visuals, I bring creativity and precision to every frame. If you’re looking for professional-quality videos, shot and edited with a cinematic touch — you’re in the right place.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <h2>This Is All My Work</h2>
+            <div class="portfolio-grid">
+                <!-- Real Estate (2 videos) -->
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1fMCv9lZnT3GCKG9pPwsVC2VwsF011icv/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Events Live Coverage</div>
+                </div>
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1tSSujF3WNdDneIL_P90jduOIvuHXQVnt/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Rasme Sweets Brand Story</div>
+                </div>
+                <!-- Brand Shoot (Cars) (2 videos) -->
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1Au_wcb5KBpy4o58x3bpV_ftFsE0yYb9m/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Wedding Event Shoot</div>
+                </div>
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/14j3m4DeEANom9akL66iHb1_5JEibXfmq/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Cars Highlight</div>
+                </div>
+                <!-- Brand Shoot (Sweets & Fashion) (2 videos) -->
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1QedOgIHtWEd84zig-mo2yy8P82ryXYoc/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Mela Exploration</div>
+                </div>
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1UwUbHfhCX-9foF-LcTo1iXkWa8uxzIF4/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Shubham Fashion Wholesale</div>
+                </div>
+                <!-- Live Events (2 videos) -->
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1VQ-tqTQmPXfdrIZ4CoI7uUjNivs_VQm1/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">The House Of Sets 1</div>
+                </div>
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1MeG7CIAGCEHLF3UJNL_-yltpdDdtmjbq/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">The house Of Sets 2</div>
+                </div>
+                <!-- Studio Bir (2 videos) -->
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1LCg1FaCzLW_gUsB7o_zuxeTCmdLt8Ikg/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">Haldi Ceremony Edit</div>
+                </div>
+                <div class="portfolio-card">
+                    <iframe src="https://drive.google.com/file/d/1GZahByBlj6OD2Qb7AtlJKX36r7nDkwQa/preview" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-title">The Grand Nirvana</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shivam Chaudhary. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
